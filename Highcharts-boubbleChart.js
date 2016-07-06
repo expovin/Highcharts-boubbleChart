@@ -26,7 +26,7 @@ define( [
 				qDimensions: [],
 				qMeasures: [],
 				qInitialDataFetch: [{
-					qWidth: 4,
+					qWidth: 10,
 					qHeight: 1000
 				}]
 			}
@@ -41,12 +41,12 @@ define( [
 				dimensions: {
 					uses: "dimensions",
 					min: 1,
-					max: 2
+					max: 3
 				},
 				measures: {
 					uses: "measures",
 					min: 2,
-					max: 3
+					max: 4
 				},
 				sorting: {
 					uses: "sorting"
@@ -126,7 +126,8 @@ define( [
 			// it's made up of different sections. Each section has a corresponding TAB settings in a dedicated file
 		
 			var mychart =  {
-				       colors : ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'],
+				       colors : ['red', 'pink', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'],
+				       //colors : layout.settings.charts.paletteColorArray,
 
 				    	/*
 							Highchart by default puts a credits label in the lower right corner of the chart. This can be changed using these options.

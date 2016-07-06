@@ -17,7 +17,7 @@ function singleDimension(layout,dimensionLabels,measureLabels,app) {
         	singlePoint['name']=row[0].qText;
             singlePoint['x']=row[1].qNum;
         	singlePoint['y']=row[2].qNum;
-            if(row.length == 4)
+            if(measureLabels.length == 3)
                 singlePoint['z']=row[3].qNum;
 
         	newMatrix.push(singlePoint);
@@ -36,6 +36,9 @@ function singleDimension(layout,dimensionLabels,measureLabels,app) {
     	count = 0;
     	// Loop su tutte la matrice
     	//console.log(layout.qHyperCube.qDataPages[0].qMatrix);
+        console.log(dimensionLabels);
+        console.log(measureLabels);
+
     	$.each(layout.qHyperCube.qDataPages[0].qMatrix, function(key, row){
 
     		mySortOrder = [];
@@ -48,7 +51,8 @@ function singleDimension(layout,dimensionLabels,measureLabels,app) {
     		outerDim = row[mySortOrder[0]].qText;
     		measure1 = row[2].qNum;
             measure2 = row[3].qNum;
-            if(row.length == 5)
+            console.log(row);
+            if(measureLabels.length == 3)
                 measure3 = row[4].qNum;
 
     		count++;
@@ -59,7 +63,7 @@ function singleDimension(layout,dimensionLabels,measureLabels,app) {
     		dim1Point['name'] = innerDim;
     		dim1Point['x'] = measure1;
             dim1Point['y'] = measure2;
-            if(row.length == 5)
+            if(measureLabels.length == 3)
                 dim1Point['z'] = measure3;
 
     		//console.log(dim1Point);

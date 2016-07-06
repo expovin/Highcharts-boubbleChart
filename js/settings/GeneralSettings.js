@@ -51,10 +51,10 @@ var generalSettings = {
 											defaultValue: true
 								},
 								paletteColorArray: {
-									type: "string",
+									type: "array",
 									expression: "optional",
 									label: "Palette Color Array",
-									defaultValue: '[ "#b0afae", "#7b7a78", "#545352", "#4477aa", "#7db8da", "#b6d7ea", "#46c646", "#f93f17", "#ffcf02", "#276e27", "#ffffff", "#000000"]',
+									defaultValue: [ "#b0afae", "#7b7a78", "#545352", "#4477aa", "#7db8da", "#b6d7ea", "#46c646", "#f93f17", "#ffcf02", "#276e27", "#ffffff", "#000000"],
 									ref: "settings.charts.paletteColorArray"
 								},
 							}
